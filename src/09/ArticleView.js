@@ -5,6 +5,7 @@ import useUser from "./useUser";
 import useComments from "./useComments";
 
 const ArticleView = ({ id }) => {
+  // 将 article 看成一个远程资源，有 data, loading, error 三个状态
   const { data: article, loading, error } = useArticle(id);
   const { data: comments } = useComments(id);
   const { data: user } = useUser(article?.userId);

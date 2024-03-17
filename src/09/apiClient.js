@@ -7,7 +7,7 @@ const endPoints = {
   staging: "https://staging.myapi.io/"
 };
 
-// Create an axios instnce
+// Create an axios instance
 const instance = axios.create({
   // in real case, determine it dynamically
   baseURL: endPoints.test,

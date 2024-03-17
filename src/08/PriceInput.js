@@ -8,11 +8,15 @@ import React, { useState, useCallback } from "react";
  * }
  */
 function PriceInput({
+  // 定义默认的 value 的数据结构
   value = { amount: 0, currency: "rmb" },
+  // 默认不处理 onChange 事件
   onChange = () => {}
 }) {
+  // 定义一个事件处理函数统一处理 amount 或者 currency 变化的场景
   const handleChange = useCallback(
     (deltaValue) => {
+    // 直接修改外部的 value 值，而不是定义内部 state
       onChange({
         ...value,
         ...deltaValue

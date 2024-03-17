@@ -6,6 +6,7 @@ export default (id) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
+    // 当 id 不存在，直接返回，不发送请求
     if (!id) return;
     setLoading(true);
     setData(null);
