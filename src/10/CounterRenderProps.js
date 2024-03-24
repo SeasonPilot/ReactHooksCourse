@@ -1,5 +1,8 @@
 import { useState, useCallback } from "react";
 
+// 计数器的 render props 的实现
+// 纯数据逻辑的重用
+// 用 Hooks 是更方便的。  src/06/UseCounter.js
 function CounterRenderProps({ children }) {
   const [count, setCount] = useState(0);
   const increment = useCallback(() => {
